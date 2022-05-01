@@ -17,7 +17,7 @@ jobs:
           calico_version=v3.22.1
           coredns_version=1.8.7
           podname=calico
-          for i in 'cni node kube-controllers pod2daemon-flexvol'
+          for i in cni node kube-controllers pod2daemon-flexvol
           do
             docker pull $podname/$i:$calico_version
             docker tag  $podname/$i:$calico_version registry.cn-hangzhou.aliyuncs.com/asvex/$i:$calico_version
