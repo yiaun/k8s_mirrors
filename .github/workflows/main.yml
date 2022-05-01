@@ -15,7 +15,7 @@ jobs:
       - name: Docker pull and push
         run: |
           docker pull calico/cni:v3.22.2
-          docker tag  calico/cni:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/cni:v3.22.2
+          docker tag  calico/cni:v3.22.2 'registry.cn-hangzhou.aliyuncs.com/asvex/cni:v3.22.2'
           #docker pull calico/node:v3.22.2
           #docker tag  calico/node:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
           #docker pull coredns/coredns:1.8.7
