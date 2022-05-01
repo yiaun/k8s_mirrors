@@ -16,17 +16,17 @@ jobs:
         run: |
           docker pull calico/cni:v3.22.2
           docker tag  calico/cni:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/cni:v3.22.2
-          docker pull calico/node:v3.22.2
-          docker tag  calico/node:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
-          docker pull coredns/coredns:1.8.7
-          docker tag  coredns/coredns:1.8.7 registry.cn-hangzhou.aliyuncs.com/asvex/ccoredns:1.8.7
-          docker pull calico/kube-controllers:v3.22.2
-          docker tag  calico/kube-controllers:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers:v3.22.2
-          docker pull calico/pod2daemon-flexvol:v3.22.2
-          docker tag  calico/pod2daemon-flexvol:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol:v3.22.2  
+          #docker pull calico/node:v3.22.2
+          #docker tag  calico/node:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
+          #docker pull coredns/coredns:1.8.7
+          #docker tag  coredns/coredns:1.8.7 registry.cn-hangzhou.aliyuncs.com/asvex/ccoredns:1.8.7
+          #docker pull calico/kube-controllers:v3.22.2
+          #docker tag  calico/kube-controllers:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers:v3.22.2
+          #docker pull calico/pod2daemon-flexvol:v3.22.2
+          #docker tag  calico/pod2daemon-flexvol:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol:v3.22.2  
           
           docker push registry.cn-hangzhou.aliyuncs.com/asvex/cni:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/ccoredns:1.8.7
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol:v3.22.2
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/ccoredns:1.8.7
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers:v3.22.2
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol:v3.22.2
