@@ -14,7 +14,7 @@ jobs:
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
         run: |
-          calico_version=v3.22.1
+          calico_version=v3.22.2
           podname=calico
           for i in cni node kube-controllers pod2daemon-flexvol
           do
