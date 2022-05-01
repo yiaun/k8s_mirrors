@@ -16,17 +16,18 @@ jobs:
         run: |
           docker login --username=${{ secrets.ACCESS_NAME }} --password=${{ secrets.ACCESS_TOKEN }} registry.cn-hangzhou.aliyuncs.com
           docker pull docker.io/calico/cni:v3.22.2
-          docker tag  docker.io/calico/cni:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/cni:v3.22.2
-          docker pull docker.io/calico/node:v3.22.2
-          docker tag  docker.io/calico/node:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/node:v3.22.2
-          docker pull docker.io/coredns/coredns:1.8.7
-          docker tag  docker.io/coredns/coredns:1.8.7 registry.cn-hangzhou.aliyuncs.com/vex-k8s/coredns/coredns:1.8.7
-          docker pull docker.io/calico/kube-controllers:v3.22.2
-          docker tag  docker.io/calico/kube-controllers:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/kube-controllers:v3.22.2
-          docker pull docker.io/calico/pod2daemon-flexvol:v3.22.2
-          docker tag  docker.io/calico/pod2daemon-flexvol:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/pod2daemon-flexvol:v3.22.2  
-          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/cni:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/node:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/coredns/coredns:1.8.7
-          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/kube-controllers:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/pod2daemon-flexvol:v3.22.2
+          docker tag  docker.io/calico/cni:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/calico/cni:v3.22.2
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/calico/cni:v3.22.2
+          #docker pull docker.io/calico/node:v3.22.2
+          #docker tag  docker.io/calico/node:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/calico/node:v3.22.2
+          #docker pull docker.io/coredns/coredns:1.8.7
+          #docker tag  docker.io/coredns/coredns:1.8.7 registry.cn-hangzhou.aliyuncs.com/asvex/coredns/coredns:1.8.7
+          #docker pull docker.io/calico/kube-controllers:v3.22.2
+          #docker tag  docker.io/calico/kube-controllers:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/calico/kube-controllers:v3.22.2
+          #docker pull docker.io/calico/pod2daemon-flexvol:v3.22.2
+          #docker tag  docker.io/calico/pod2daemon-flexvol:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/calico/pod2daemon-flexvol:v3.22.2  
+          
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/calico/node:v3.22.2
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/coredns/coredns:1.8.7
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/calico/kube-controllers:v3.22.2
+          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/calico/pod2daemon-flexvol:v3.22.2
