@@ -14,7 +14,7 @@ jobs:
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
         run: |
-          docker login --username=yqkallpass registry.cn-hangzhou.aliyuncs.com
+          docker login --username=${{ secrets.ACCESS_NAME }} --password=${{ secrets.ACCESS_TOKEN }} registry.cn-hangzhou.aliyuncs.com
           docker pull docker.io/calico/cni:v3.22.2
           docker tag  docker.io/calico/cni:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/cni:v3.22.2
           docker pull docker.io/calico/node:v3.22.2
