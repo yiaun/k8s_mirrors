@@ -9,7 +9,7 @@ jobs:
       - name: Login in Docker Registry
         uses: docker/login-action@v1
         with:
-          registry: registry.aliyuncs.com
+          registry: registry.cn-hangzhou.aliyuncs.com
           username: ${{ secrets.ACCESS_NAME }}
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
