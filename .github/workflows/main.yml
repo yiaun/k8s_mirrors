@@ -14,19 +14,16 @@ jobs:
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
         run: |
-          /bin/bash docker.sh
-          #docker pull calico/cni 
-          #docker tag  calico/cni  registry.cn-hangzhou.aliyuncs.com/asvex/cni 
-          #docker pull calico/node 
-          #docker tag  calico/node registry.cn-hangzhou.aliyuncs.com/asvex/node 
-          #docker pull coredns/coredns 
-          #docker tag  coredns/coredns  registry.cn-hangzhou.aliyuncs.com/asvex/coredns 
-          #docker pull calico/kube-controllers 
-          #docker tag  calico/kube-controllers registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers 
-          #docker pull calico/pod2daemon-flexvol 
-          #docker tag  calico/pod2daemon-flexvol  registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol
-          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/cni
-          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/node
-          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/coredns
-          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers
-          #docker push registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol
+          calico_version=v3.22.1
+          coredns_version=1.8.7
+          podname=calico
+          for i in 'cni node kube-controllers pod2daemon-flexvol'
+          do
+            docker pull $podname/$i:$calico_version
+            docker tag  $podname/$i:$calico_version registry.cn-hangzhou.aliyuncs.com/asvex/$i:$calico_version
+            docker push registry.cn-hangzhou.aliyuncs.com/asvex/$i:$calico_version
+          done
+          
+          docker pull coredns/coredns:$coredns_version
+          docker tag  coredns/coredns:$coredns_version registry.cn-hangzhou.aliyuncs.com/asvex/coredns:$coredns_version
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/coredns:$coredns_version
