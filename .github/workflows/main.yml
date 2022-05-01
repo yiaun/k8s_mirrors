@@ -25,8 +25,8 @@ jobs:
           docker tag  docker.io/calico/kube-controllers:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/kube-controllers:v3.22.2
           docker pull docker.io/calico/pod2daemon-flexvol:v3.22.2
           docker tag  docker.io/calico/pod2daemon-flexvol:v3.22.2 registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/pod2daemon-flexvol:v3.22.2  
-          #docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/cni:v3.22.2
-          #docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/node:v3.22.2
-          #docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/coredns/coredns:1.8.7
-          #docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/kube-controllers:v3.22.2
-          #docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/pod2daemon-flexvol:v3.22.2
+          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/cni:v3.22.2
+          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/node:v3.22.2
+          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/coredns/coredns:1.8.7
+          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/kube-controllers:v3.22.2
+          docker push registry.cn-hangzhou.aliyuncs.com/vex-k8s/calico/pod2daemon-flexvol:v3.22.2
