@@ -9,7 +9,7 @@ jobs:
       - name: Login in Docker Registry
         uses: docker/login-action@v1
         with:
-          registry: registry.cn-hangzhou.aliyuncs.com
+          registry: registry.cn-shanghai.aliyuncs.com
           username: ${{ secrets.ACCESS_NAME }}
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
@@ -20,10 +20,10 @@ jobs:
           for i in cni node kube-controllers pod2daemon-flexvol
           do
             docker pull $podname/$i:$calico_version
-            docker tag  $podname/$i:$calico_version registry.cn-hangzhou.aliyuncs.com/asvex/$i:$calico_version
+            docker tag  $podname/$i:$calico_version registry.cn-shanghai.aliyuncs.com/asvex/$i:$calico_version
             docker push registry.cn-hangzhou.aliyuncs.com/asvex/$i:$calico_version
           done
           
           docker pull coredns/coredns:$coredns_version
-          docker tag  coredns/coredns:$coredns_version registry.cn-hangzhou.aliyuncs.com/asvex/coredns:$coredns_version
+          docker tag  coredns/coredns:$coredns_version registry.cn-shanghai.aliyuncs.com/asvex/coredns:$coredns_version
           docker push registry.cn-hangzhou.aliyuncs.com/asvex/coredns:$coredns_version
