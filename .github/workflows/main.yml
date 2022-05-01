@@ -14,19 +14,19 @@ jobs:
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull calico/cni:v3.22.2
-          docker tag  calico/cni:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/cni:v3.22.2
-          docker pull calico/node:v3.22.2
-          docker tag  calico/node:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
-          docker pull coredns/coredns:1.8.7
-          docker tag  coredns/coredns:1.8.7 registry.cn-hangzhou.aliyuncs.com/asvex/coredns:1.8.7
-          docker pull calico/kube-controllers:v3.22.2
-          docker tag  calico/kube-controllers:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers:v3.22.2
-          docker pull calico/pod2daemon-flexvol:v3.22.2
-          docker tag  calico/pod2daemon-flexvol:v3.22.2 registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol:v3.22.2  
+          docker pull calico/cni 
+          docker tag  calico/cni  registry.cn-hangzhou.aliyuncs.com/asvex/cni 
+          docker pull calico/node 
+          docker tag  calico/node registry.cn-hangzhou.aliyuncs.com/asvex/node 
+          docker pull coredns/coredns 
+          docker tag  coredns/coredns  registry.cn-hangzhou.aliyuncs.com/asvex/coredns 
+          docker pull calico/kube-controllers 
+          docker tag  calico/kube-controllers registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers 
+          docker pull calico/pod2daemon-flexvol 
+          docker tag  calico/pod2daemon-flexvol  registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol
           
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/cni:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/node:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/coredns:1.8.7
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers:v3.22.2
-          docker push registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol:v3.22.2
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/cni
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/node
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/coredns
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/kube-controllers
+          docker push registry.cn-hangzhou.aliyuncs.com/asvex/pod2daemon-flexvol
