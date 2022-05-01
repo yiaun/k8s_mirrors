@@ -1,8 +1,0 @@
-images:
-  docker.io:
-    - calico/cni
-    - calico/node
-    - calico/kube-controllers
-    - calico/pod2daemon-felxvol
-  k8s.gcr.io
-    - coredns/coredns

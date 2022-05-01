@@ -1,0 +1,4 @@
+calico/cni
+calico/node
+calico/kube-controllers
+calico/pod2daemon-felxvol
