@@ -14,18 +14,18 @@ jobs:
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull docker.io/calico/cni
-          docker tag  docker.io/calico/cni ghcr.io/asvex/calico/cni
-          docker pull docker.io/calico/node
-          docker tag  docker.io/calico/node ghcr.io/asvex/calico/node
-          docker pull docker.io/coredns/coredns
-          docker tag  docker.io/coredns/coredns ghcr.io/asvex/coredns/coredns
-          docker pull docker.io/calico/kube-controllers
-          docker tag  docker.io/calico/kube-controllers ghcr.io/asvex/calico/kube-controllers
-          docker pull docker.io/calico/pod2daemon-flexvol
-          docker tag  docker.io/calico/pod2daemon-flexvol ghcr.io/asvex/calico/pod2daemon-flexvol   
-          docker push ghcr.io/asvex/calico/cni
-          docker push ghcr.io/asvex/calico/node
-          docker push ghcr.io/asvex/coredns/coredns
-          docker push ghcr.io/asvex/calico/kube-controllers
-          docker push ghcr.io/asvex/calico/pod2daemon-flexvol
+          docker pull docker.io/calico/cn:v3.22.2
+          docker tag  docker.io/calico/cn:v3.22.2 ghcr.io/asvex/calico/cn:v3.22.2
+          docker pull docker.io/calico/nod:v3.22.2
+          docker tag  docker.io/calico/nod:v3.22.2 ghcr.io/asvex/calico/nod:v3.22.2
+          docker pull docker.io/coredns/coredns:1.8.7
+          docker tag  docker.io/coredns/coredns:1.8.7 ghcr.io/asvex/coredns/coredns:1.8.7
+          docker pull docker.io/calico/kube-controller:v3.22.2
+          docker tag  docker.io/calico/kube-controller:v3.22.2 ghcr.io/asvex/calico/kube-controller:v3.22.2
+          docker pull docker.io/calico/pod2daemon-flexvo:v3.22.2
+          docker tag  docker.io/calico/pod2daemon-flexvo:v3.22.2 ghcr.io/asvex/calico/pod2daemon-flexvol:v3.22.2  
+          docker push ghcr.io/asvex/calico/cni:v3.22.2
+          docker push ghcr.io/asvex/calico/node:v3.22.2
+          docker push ghcr.io/asvex/coredns/coredns:1.8.7
+          docker push ghcr.io/asvex/calico/kube-controllers:v3.22.2
+          docker push ghcr.io/asvex/calico/pod2daemon-flexvol:v3.22.2
