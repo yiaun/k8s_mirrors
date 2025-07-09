@@ -29,6 +29,6 @@ jobs:
           # docker pull k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0
           # docker tag k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0 registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
           # docker push registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
-          docker pull centos:8
-          docker tag centos:8 registry.cn-shanghai.aliyuncs.com/asvex/centos:8
-          docker push registry.cn-shanghai.aliyuncs.com/asvex/centos:8
+          docker pull python:3.12-bookworm
+          docker tag python:3.12-bookworm registry.cn-shanghai.aliyuncs.com/asvex/python:3.12-bookworm
+          docker push registry.cn-shanghai.aliyuncs.com/asvex/python:3.12-bookworm
