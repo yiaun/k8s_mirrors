@@ -29,6 +29,6 @@ jobs:
           # docker pull k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0
           # docker tag k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0 registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
           # docker push registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
-          docker pull cadvisor
+          docker pull docker.io/library/cadvisor:latest
           docker tag cadvisor registry.cn-shanghai.aliyuncs.com/asvex/cadvisor
           docker push registry.cn-shanghai.aliyuncs.com/asvex/cadvisor
