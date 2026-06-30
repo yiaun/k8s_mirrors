@@ -19,9 +19,9 @@ jobs:
       - name: Docker pull and push
         run: |
           # calico_version=v3.32.1
-          docker pull quay.io/calico/calico:master
-          docker tag quay.io/calico/calico:master registry.cn-shanghai.aliyuncs.com/asvex/calico:master
-          docker push registry.cn-shanghai.aliyuncs.com/asvex/calico:master
+          # docker pull quay.io/calico/calico:master
+          # docker tag quay.io/calico/calico:master registry.cn-shanghai.aliyuncs.com/asvex/calico:master
+          # docker push registry.cn-shanghai.aliyuncs.com/asvex/calico:master
           # podname=calico
           # for i in cni node kube-controllers pod2daemon-flexvol
           # do
@@ -35,9 +35,10 @@ jobs:
           # docker pull registry.k8s.io/pause:3.10.1
           # docker tag registry.k8s.io/pause:3.10.1 registry.cn-shanghai.aliyuncs.com/asvex/pause:3.10.1
           # docker push registry.cn-shanghai.aliyuncs.com/asvex/pause:3.10.1
-          # docker pull ghcr.io/flannel-io/flannel:v0.27.2
-          # docker tag ghcr.io/flannel-io/flannel:v0.27.2 registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.27.2
-          # docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.27.2
-          # docker pull ghcr.io/flannel-io/flannel-cni-plugin:v1.7.1-flannel1
-          # docker tag ghcr.io/flannel-io/flannel-cni-plugin:v1.7.1-flannel1 registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.7.1-flannel1
-          # docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.7.1-flannel1
+          
+          docker pull ghcr.io/flannel-io/flannel:v0.28.5
+          docker tag ghcr.io/flannel-io/flannel:v0.28.5 registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.28.5
+          docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.28.5
+          docker pull ghcr.io/flannel-io/flannel-cni-plugin:v1.9.1-flannel1
+          docker tag ghcr.io/flannel-io/flannel-cni-plugin:v1.9.1-flannel1 registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.9.1-flannel1
+          docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.9.1-flannel1
