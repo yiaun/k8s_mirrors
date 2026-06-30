@@ -18,20 +18,23 @@ jobs:
           password: ${{ secrets.ACCESS_TOKEN }}
       - name: Docker pull and push
         run: |
-          # calico_version=v3.25.0
-          # podname=calico
-          # for i in cni node kube-controllers pod2daemon-flexvol
-          # do
-          #   docker pull $podname/$i:$calico_version
-          #   docker tag  $podname/$i:$calico_version registry.cn-shanghai.aliyuncs.com/asvex/$i:$calico_version
-          #   docker push registry.cn-shanghai.aliyuncs.com/asvex/$i:$calico_version
-          # done
-          # docker pull k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0
-          # docker tag k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0 registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
-          # docker push registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
-          docker pull ghcr.io/flannel-io/flannel:v0.27.2
-          docker tag ghcr.io/flannel-io/flannel:v0.27.2 registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.27.2
-          docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.27.2
-          docker pull ghcr.io/flannel-io/flannel-cni-plugin:v1.7.1-flannel1
-          docker tag ghcr.io/flannel-io/flannel-cni-plugin:v1.7.1-flannel1 registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.7.1-flannel1
-          docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.7.1-flannel1
+          calico_version=v3.32.1
+          podname=calico
+          for i in cni node kube-controllers pod2daemon-flexvol
+          do
+            docker pull $podname/$i:$calico_version
+            docker tag  $podname/$i:$calico_version registry.cn-shanghai.aliyuncs.com/asvex/$i:$calico_version
+            docker push registry.cn-shanghai.aliyuncs.com/asvex/$i:$calico_version
+          done
+          docker pull k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0
+          docker tag k8s.gcr.io/autoscaling/vpa-admission-controller:0.10.0 registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
+          docker push registry.cn-shanghai.aliyuncs.com/asvex/vpa-admission-controller:0.10.0
+          docker pull registry.k8s.io/pause:3.10.1
+          docker tab registry.k8s.io/pause:3.10.1 registry.cn-shanghai.aliyuncs.com/asvex/pause:3.10.1
+          docker push registry.cn-shanghai.aliyuncs.com/asvex/pause:3.10.1
+          # docker pull ghcr.io/flannel-io/flannel:v0.27.2
+          # docker tag ghcr.io/flannel-io/flannel:v0.27.2 registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.27.2
+          # docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel:v0.27.2
+          # docker pull ghcr.io/flannel-io/flannel-cni-plugin:v1.7.1-flannel1
+          # docker tag ghcr.io/flannel-io/flannel-cni-plugin:v1.7.1-flannel1 registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.7.1-flannel1
+          # docker push registry.cn-shanghai.aliyuncs.com/asvex/flannel-cni-plugin:v1.7.1-flannel1
